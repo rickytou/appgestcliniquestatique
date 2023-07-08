@@ -1,0 +1,282 @@
+/*Les points de rupture [breakpoints]
+* Ecran petit >= 576px [$smallDevice]
+* Ecran moyen >= 768px [$mediumDevice]
+* Ecran large >= 992px [$largeDevice]
+* Ecran Extra large >= 1200px [$XlargeDevice]
+* Ecran Extra extra large >= 1400px [$XXlargeDevice]
+*/
+/* line 3, ../sass/styles.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 6, ../sass/styles.scss */
+body {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-family: sans-serif;
+}
+
+/* line 11, ../sass/styles.scss */
+section {
+  height: 100vh;
+}
+
+/* Container global*/
+/* line 15, ../sass/styles.scss */
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Container Header Global */
+/* line 23, ../sass/styles.scss */
+#nav {
+  height: 6rem;
+  border-bottom: 0.2rem solid #e4e4e4;
+  background-color: #230939;
+}
+
+/* Container centre navigation*/
+/* line 29, ../sass/styles.scss */
+.navigation {
+  min-width: 30rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+/* Logo */
+/* line 38, ../sass/styles.scss */
+.logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* line 44, ../sass/styles.scss */
+.logo img {
+  width: 4.5rem;
+}
+
+/* Nom clinique */
+/* line 48, ../sass/styles.scss */
+.logo h1 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* Menuburger */
+/* line 53, ../sass/styles.scss */
+.menuburger {
+  width: 2.4rem;
+  height: 1.8rem;
+  overflow-x: hidden;
+  position: relative;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* line 61, ../sass/styles.scss */
+.menuburger-ligne {
+  height: 0.2rem;
+  position: absolute;
+  left: 0;
+  background: #E85C1C;
+  transition: transform 0.3s ease-in;
+}
+
+/* line 68, ../sass/styles.scss */
+.menuburger-ligne__1 {
+  width: 100%;
+  top: 0;
+}
+
+/* line 72, ../sass/styles.scss */
+.menuburger-ligne__2 {
+  width: 70%;
+  top: 0.7rem;
+}
+
+/* line 76, ../sass/styles.scss */
+.menuburger-ligne__3 {
+  width: 100%;
+  top: 1.4rem;
+}
+
+/* menuburger [onOffMenuBurger]*/
+/* line 81, ../sass/styles.scss */
+.menuburger.onOffMenuburger .menuburger-ligne__2 {
+  transform: translateX(-2.4rem);
+}
+
+/* line 84, ../sass/styles.scss */
+.menuburger.onOffMenuburger .menuburger-ligne__1 {
+  transform: rotate(-45deg);
+  top: 0.7rem;
+}
+
+/* line 88, ../sass/styles.scss */
+.menuburger.onOffMenuburger .menuburger-ligne__3 {
+  transform: rotate(-135deg);
+  top: 0.7rem;
+}
+
+/* Menu */
+/* line 93, ../sass/styles.scss */
+.menu {
+  width: 20rem;
+  height: 100vh;
+  padding-top: 4rem;
+  padding-left: 0;
+  position: absolute;
+  top: 6rem;
+  right: -20rem;
+  transition: right 0.3s ease-in;
+  background-color: #230939;
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+/* line 106, ../sass/styles.scss */
+.menu li {
+  padding: 1.2rem 2rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease-in;
+  border-bottom: 0.1rem solid #434343;
+  text-align: right;
+}
+
+/* line 113, ../sass/styles.scss */
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease-in;
+}
+
+/* line 118, ../sass/styles.scss */
+.menu a span + span {
+  margin-left: 1rem;
+}
+
+/* Le menu li actif */
+/* line 122, ../sass/styles.scss */
+.menu li.active {
+  background-color: #C9DDF1;
+}
+
+/* line 125, ../sass/styles.scss */
+.menu li.active a {
+  color: #230939;
+}
+
+/* Le menu li hover */
+/* line 129, ../sass/styles.scss */
+.menu li:hover {
+  background-color: #C9DDF1;
+}
+
+/* line 132, ../sass/styles.scss */
+.menu li:hover a {
+  color: #230939;
+}
+
+/* Menu [Class : onOffMenuBurger ] */
+/* line 136, ../sass/styles.scss */
+.menu.onOffMenuburger {
+  right: 0;
+}
+
+/* Taille d'ecran minimal 768px */
+@media screen and (min-width: 768px) {
+  /* Nom clinique */
+  /* Menuburger*/
+  /* line 144, ../sass/styles.scss */
+  .menuburger {
+    display: none;
+  }
+
+  /* Menu */
+  /* line 148, ../sass/styles.scss */
+  .menu {
+    width: auto;
+    height: auto;
+    display: flex;
+    padding-top: 0;
+    position: static;
+    transition: none;
+    background-color: none;
+    margin-left: auto;
+  }
+
+  /* line 158, ../sass/styles.scss */
+  .menu li {
+    border-bottom: 0 none;
+    margin-bottom: 0;
+    padding: 0 1rem;
+  }
+
+  /* line 163, ../sass/styles.scss */
+  .menu li.active {
+    background-color: transparent;
+  }
+
+  /* line 166, ../sass/styles.scss */
+  .menu li.active a {
+    color: #ffffff;
+  }
+
+  /* line 169, ../sass/styles.scss */
+  .menu li:hover {
+    background-color: transparent;
+  }
+
+  /* line 172, ../sass/styles.scss */
+  .menu li:hover a {
+    color: #ffffff;
+  }
+
+  /* line 175, ../sass/styles.scss */
+  .menu a span + span {
+    display: none;
+  }
+
+  /* line 178, ../sass/styles.scss */
+  .fa-regular.fa-circle-user {
+    display: inline;
+  }
+
+  /* line 181, ../sass/styles.scss */
+  .fa-regular.fa-comments {
+    display: inline;
+  }
+
+  /* line 184, ../sass/styles.scss */
+  .fa-regular.fa-envelope {
+    display: inline;
+  }
+
+  /* line 187, ../sass/styles.scss */
+  .menuLinkHidden {
+    display: none;
+  }
+}
+/* Taille d'ecran minimal 992px */
+@media screen and (min-width: 992px) {
+  /* Nom clinique */
+  /* line 196, ../sass/styles.scss */
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+}
+/* Taille d'ecran minimal 1200px */
+@media screen and (min-width: 1200px) {
+  /* Container centre navigation*/
+  /* line 204, ../sass/styles.scss */
+  .navigation {
+    width: 100rem;
+    margin: auto;
+  }
+}

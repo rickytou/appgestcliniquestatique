@@ -1,0 +1,208 @@
+@import 'partials/variables';
+@import 'compass/css3';
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-family: sans-serif;
+}
+section{
+  height: 100vh;
+}
+/* Container global*/
+.wrapper{
+  width: 100%;
+  overflow-x: hidden;
+}
+/* Container Header Global */
+#header{
+  
+}
+#nav{
+  height: 6rem;
+  border-bottom: 0.2rem solid #e4e4e4;
+  background-color: $couleurtertiaire;
+}
+  /* Container centre navigation*/
+.navigation{
+  min-width: 30rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+/* Logo */
+.logo{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.logo img{
+  width: 4.5rem;
+}
+/* Nom clinique */
+.logo h1{
+  font-size: 1.4rem;
+  color: #fff;
+}
+/* Menuburger */
+.menuburger{
+  width: 2.4rem;
+  height: 1.8rem;
+  overflow-x:hidden;
+  position: relative; 
+  margin-left: auto;
+  cursor: pointer;
+}
+.menuburger-ligne{
+  height: 0.2rem;
+  position: absolute;
+  left: 0;
+  background: $couleurprimaire;
+  transition: transform 0.3s ease-in;
+}
+.menuburger-ligne__1{
+  width: 100%;
+  top: 0;
+}
+.menuburger-ligne__2{
+  width: 70%;
+  top: 0.7rem;  
+}
+.menuburger-ligne__3{
+  width: 100%;
+  top: 1.4rem;  
+}
+/* menuburger [onOffMenuBurger]*/
+.menuburger.onOffMenuburger .menuburger-ligne__2{
+  transform: translateX(-2.4rem);
+}
+.menuburger.onOffMenuburger .menuburger-ligne__1{
+  transform: rotate(-45deg);
+  top: 0.7rem;
+}
+.menuburger.onOffMenuburger .menuburger-ligne__3{
+  transform: rotate(-135deg);
+  top: 0.7rem;
+}
+/* Menu */
+.menu{
+  width: 20rem;
+  height: 100vh;
+  padding-top: 4rem;
+  padding-left: 0;
+  position: absolute;
+  top: 6rem;
+  right: -20rem;
+  transition:right 0.3s ease-in;
+  background-color: $couleurtertiaire;
+  list-style: none;
+  font-size: 1.4rem;
+}
+.menu li{
+  padding: 1.2rem 2rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease-in;
+  border-bottom: 0.1rem solid #434343;
+  text-align: right;
+}
+.menu a{
+  text-decoration: none;
+  color: $couleurwhite;
+  transition: color 0.3s ease-in;
+}
+.menu a span + span{
+  margin-left: 1rem;
+}
+/* Le menu li actif */
+.menu li.active{
+  background-color: $couleurbleuciel;
+}
+.menu li.active a{
+  color: $couleurtertiaire;
+}
+/* Le menu li hover */
+.menu li:hover{
+  background-color: $couleurbleuciel;
+}
+.menu li:hover a{
+  color: $couleurtertiaire;
+}
+/* Menu [Class : onOffMenuBurger ] */
+.menu.onOffMenuburger{
+  right: 0;
+}
+/* Taille d'ecran minimal 768px */
+@media screen and (min-width:#{$mediumDevice * 1px}){
+  /* Nom clinique */
+
+/* Menuburger*/
+.menuburger{
+  display: none;
+}
+/* Menu */
+.menu{
+  width: auto;
+  height: auto;
+  display: flex;
+  padding-top: 0;
+  position: static;
+  transition:none;
+  background-color: none;
+  margin-left: auto;
+}
+.menu li{
+  border-bottom: 0 none;
+  margin-bottom: 0;
+  padding: 0 1rem;
+}
+.menu li.active{
+  background-color: transparent;
+}
+.menu li.active a {
+  color: $couleurwhite;
+}
+.menu li:hover{
+  background-color: transparent;
+}
+.menu li:hover a{
+  color: $couleurwhite;
+}
+.menu a span + span{
+  display: none;
+}
+.fa-regular.fa-circle-user{
+  display: inline;
+}
+.fa-regular.fa-comments{
+  display: inline;
+}
+.fa-regular.fa-envelope{
+  display: inline;
+}
+.menuLinkHidden{
+  display: none;
+}
+}
+
+
+/* Taille d'ecran minimal 992px */
+@media screen and (min-width:#{$largeDevice * 1px}){
+    /* Nom clinique */
+  .logo h1{
+    font-size: 1.8rem;
+  }
+}
+
+/* Taille d'ecran minimal 1200px */
+@media screen and (min-width:#{$XlargeDevice * 1px}){
+  /* Container centre navigation*/
+  .navigation{
+    width: 100rem;
+    margin: auto;
+  }
+}
