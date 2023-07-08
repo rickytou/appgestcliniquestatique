@@ -7,6 +7,7 @@ body{
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   font-family: sans-serif;
+  background-color: #fbfbfb;
 }
 section{
   height: 100vh;
@@ -17,12 +18,10 @@ section{
   overflow-x: hidden;
 }
 /* Container Header Global */
-#header{
-  
-}
+
 #nav{
   height: 6rem;
-  border-bottom: 0.2rem solid #e4e4e4;
+  border-bottom: 0.3rem solid $couleurbleuciel;
   background-color: $couleurtertiaire;
 }
   /* Container centre navigation*/
@@ -109,6 +108,7 @@ section{
   transition: background-color 0.3s ease-in;
   border-bottom: 0.1rem solid #434343;
   text-align: right;
+  cursor: pointer;
 }
 .menu a{
   text-decoration: none;
@@ -136,9 +136,34 @@ section{
 .menu.onOffMenuburger{
   right: 0;
 }
+.headerMiddle{
+  padding: 3rem 1rem;
+}
+.headerMiddle strong{
+  display: block;
+  margin: 2rem 0;
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+.headerMiddle h2{
+  font-size: 1.8rem;  
+  font-weight: bold;
+}
+
 /* Taille d'ecran minimal 768px */
 @media screen and (min-width:#{$mediumDevice * 1px}){
-  /* Nom clinique */
+/* Navigation */
+.headerTop{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.navigation{
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 /* Menuburger*/
 .menuburger{
@@ -147,33 +172,52 @@ section{
 /* Menu */
 .menu{
   width: auto;
-  height: auto;
+  height: 100%;
   display: flex;
   padding-top: 0;
   position: static;
   transition:none;
-  background-color: none;
+  background-color: transparent;
   margin-left: auto;
+  margin-bottom: 0;
+  line-height: 3rem;
 }
 .menu li{
-  border-bottom: 0 none;
   margin-bottom: 0;
-  padding: 0 1rem;
+  margin-left: 0.2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-bottom: 0 none;
+  text-align: center;
 }
 .menu li.active{
-  background-color: transparent;
+  background-color: $couleurbleuciel;
 }
 .menu li.active a {
-  color: $couleurwhite;
+  color: $couleurtertiaire;
 }
-.menu li:hover{
-  background-color: transparent;
+
+.menu li:nth-child(1):hover,
+.menu li:nth-child(2):hover,
+.menu li:nth-child(3):hover,
+.menu li:nth-child(4):hover{
+  background-color: $couleurbleuciel;
 }
-.menu li:hover a{
-  color: $couleurwhite;
+.menu li:nth-child(1):hover a,
+.menu li:nth-child(2):hover a,
+.menu li:nth-child(3):hover a,
+.menu li:nth-child(4):hover a{
+  color: $couleurtertiaire;
 }
+// .menu li:nth-child(5),
+// .menu li:nth-child(6),
+// .menu li:nth-child(7){
+// padding-left:0.5rem;
+// padding-right: 0.5rem;
+// }
 .menu a span + span{
   display: none;
+  margin-left: 0;
 }
 .fa-regular.fa-circle-user{
   display: inline;
@@ -186,6 +230,19 @@ section{
 }
 .menuLinkHidden{
   display: none;
+}
+/* HeaderMiddle */
+.headerMiddle{
+ display: flex;
+ gap: 2rem;
+ padding: 6rem 1rem 3rem 1rem;
+}
+
+.headerMiddle img{
+  width: calc(50% - 1rem);
+}
+.accroche{
+  padding: 2rem 1rem; 
 }
 }
 
@@ -201,8 +258,11 @@ section{
 /* Taille d'ecran minimal 1200px */
 @media screen and (min-width:#{$XlargeDevice * 1px}){
   /* Container centre navigation*/
-  .navigation{
+  .navigation,
+  .headerMiddle{
     width: 100rem;
     margin: auto;
   }
+  /* Container centre headeMiddle */
+
 }

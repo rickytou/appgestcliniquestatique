@@ -18,7 +18,7 @@ declare(strict_types = 1);
     <!-- Container Header Global -->
     <header id="header">
       <!-- Container centre header --> 
-      <div class="header">
+      <div class="headerTop">
         <nav id="nav" role=navigation>
           <!-- Container centre navigation --> 
           <div class="navigation">
@@ -47,7 +47,18 @@ declare(strict_types = 1);
         </nav>
       </div>
       <!-- Container Navigation Global -->
-     
+     <div class="headerMiddle">
+      <!-- Images illustratives -->
+      
+        <img src="assets/images/docteur.svg" />
+
+      <!-- Phrase d'accrode -->
+      <div class="accroche">
+        <strong>Transformation num&eacute;rique de la clinique</strong>
+        <h2>Leader et Pionnier dans le domaine</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit sit aliquam, fuga blanditiis vero nemo repudiandae accusamus porro pariatur quod?</p>
+      </div>
+     </div>
     </header>
     <section>
       fhksdhf

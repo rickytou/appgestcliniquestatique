@@ -15,30 +15,31 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   font-family: sans-serif;
+  background-color: #fbfbfb;
 }
 
-/* line 11, ../sass/styles.scss */
+/* line 12, ../sass/styles.scss */
 section {
   height: 100vh;
 }
 
 /* Container global*/
-/* line 15, ../sass/styles.scss */
+/* line 16, ../sass/styles.scss */
 .wrapper {
   width: 100%;
   overflow-x: hidden;
 }
 
 /* Container Header Global */
-/* line 23, ../sass/styles.scss */
+/* line 22, ../sass/styles.scss */
 #nav {
   height: 6rem;
-  border-bottom: 0.2rem solid #e4e4e4;
+  border-bottom: 0.3rem solid #C9DDF1;
   background-color: #230939;
 }
 
 /* Container centre navigation*/
-/* line 29, ../sass/styles.scss */
+/* line 28, ../sass/styles.scss */
 .navigation {
   min-width: 30rem;
   height: 100%;
@@ -49,27 +50,27 @@ section {
 }
 
 /* Logo */
-/* line 38, ../sass/styles.scss */
+/* line 37, ../sass/styles.scss */
 .logo {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 .logo img {
   width: 4.5rem;
 }
 
 /* Nom clinique */
-/* line 48, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 .logo h1 {
   font-size: 1.4rem;
   color: #fff;
 }
 
 /* Menuburger */
-/* line 53, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 .menuburger {
   width: 2.4rem;
   height: 1.8rem;
@@ -79,7 +80,7 @@ section {
   cursor: pointer;
 }
 
-/* line 61, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 .menuburger-ligne {
   height: 0.2rem;
   position: absolute;
@@ -88,44 +89,44 @@ section {
   transition: transform 0.3s ease-in;
 }
 
-/* line 68, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 .menuburger-ligne__1 {
   width: 100%;
   top: 0;
 }
 
-/* line 72, ../sass/styles.scss */
+/* line 71, ../sass/styles.scss */
 .menuburger-ligne__2 {
   width: 70%;
   top: 0.7rem;
 }
 
-/* line 76, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 .menuburger-ligne__3 {
   width: 100%;
   top: 1.4rem;
 }
 
 /* menuburger [onOffMenuBurger]*/
-/* line 81, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 .menuburger.onOffMenuburger .menuburger-ligne__2 {
   transform: translateX(-2.4rem);
 }
 
-/* line 84, ../sass/styles.scss */
+/* line 83, ../sass/styles.scss */
 .menuburger.onOffMenuburger .menuburger-ligne__1 {
   transform: rotate(-45deg);
   top: 0.7rem;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 .menuburger.onOffMenuburger .menuburger-ligne__3 {
   transform: rotate(-135deg);
   top: 0.7rem;
 }
 
 /* Menu */
-/* line 93, ../sass/styles.scss */
+/* line 92, ../sass/styles.scss */
 .menu {
   width: 20rem;
   height: 100vh;
@@ -140,13 +141,14 @@ section {
   font-size: 1.4rem;
 }
 
-/* line 106, ../sass/styles.scss */
+/* line 105, ../sass/styles.scss */
 .menu li {
   padding: 1.2rem 2rem;
   margin-bottom: 0.5rem;
   transition: background-color 0.3s ease-in;
   border-bottom: 0.1rem solid #434343;
   text-align: right;
+  cursor: pointer;
 }
 
 /* line 113, ../sass/styles.scss */
@@ -189,84 +191,147 @@ section {
   right: 0;
 }
 
+/* line 139, ../sass/styles.scss */
+.headerMiddle {
+  padding: 3rem 1rem;
+}
+
+/* line 142, ../sass/styles.scss */
+.headerMiddle strong {
+  display: block;
+  margin: 2rem 0;
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+/* line 148, ../sass/styles.scss */
+.headerMiddle h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
 /* Taille d'ecran minimal 768px */
 @media screen and (min-width: 768px) {
-  /* Nom clinique */
+  /* Navigation */
+  /* line 156, ../sass/styles.scss */
+  .headerTop {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  /* line 163, ../sass/styles.scss */
+  .navigation {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   /* Menuburger*/
-  /* line 144, ../sass/styles.scss */
+  /* line 169, ../sass/styles.scss */
   .menuburger {
     display: none;
   }
 
   /* Menu */
-  /* line 148, ../sass/styles.scss */
+  /* line 173, ../sass/styles.scss */
   .menu {
     width: auto;
-    height: auto;
+    height: 100%;
     display: flex;
     padding-top: 0;
     position: static;
     transition: none;
-    background-color: none;
+    background-color: transparent;
     margin-left: auto;
-  }
-
-  /* line 158, ../sass/styles.scss */
-  .menu li {
-    border-bottom: 0 none;
     margin-bottom: 0;
-    padding: 0 1rem;
+    line-height: 3rem;
   }
 
-  /* line 163, ../sass/styles.scss */
+  /* line 185, ../sass/styles.scss */
+  .menu li {
+    margin-bottom: 0;
+    margin-left: 0.2rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-bottom: 0 none;
+    text-align: center;
+  }
+
+  /* line 193, ../sass/styles.scss */
   .menu li.active {
-    background-color: transparent;
+    background-color: #C9DDF1;
   }
 
-  /* line 166, ../sass/styles.scss */
+  /* line 196, ../sass/styles.scss */
   .menu li.active a {
-    color: #ffffff;
+    color: #230939;
   }
 
-  /* line 169, ../sass/styles.scss */
-  .menu li:hover {
-    background-color: transparent;
+  /* line 200, ../sass/styles.scss */
+  .menu li:nth-child(1):hover,
+  .menu li:nth-child(2):hover,
+  .menu li:nth-child(3):hover,
+  .menu li:nth-child(4):hover {
+    background-color: #C9DDF1;
   }
 
-  /* line 172, ../sass/styles.scss */
-  .menu li:hover a {
-    color: #ffffff;
+  /* line 206, ../sass/styles.scss */
+  .menu li:nth-child(1):hover a,
+  .menu li:nth-child(2):hover a,
+  .menu li:nth-child(3):hover a,
+  .menu li:nth-child(4):hover a {
+    color: #230939;
   }
 
-  /* line 175, ../sass/styles.scss */
+  /* line 218, ../sass/styles.scss */
   .menu a span + span {
     display: none;
+    margin-left: 0;
   }
 
-  /* line 178, ../sass/styles.scss */
+  /* line 222, ../sass/styles.scss */
   .fa-regular.fa-circle-user {
     display: inline;
   }
 
-  /* line 181, ../sass/styles.scss */
+  /* line 225, ../sass/styles.scss */
   .fa-regular.fa-comments {
     display: inline;
   }
 
-  /* line 184, ../sass/styles.scss */
+  /* line 228, ../sass/styles.scss */
   .fa-regular.fa-envelope {
     display: inline;
   }
 
-  /* line 187, ../sass/styles.scss */
+  /* line 231, ../sass/styles.scss */
   .menuLinkHidden {
     display: none;
+  }
+
+  /* HeaderMiddle */
+  /* line 235, ../sass/styles.scss */
+  .headerMiddle {
+    display: flex;
+    gap: 2rem;
+    padding: 6rem 1rem 3rem 1rem;
+  }
+
+  /* line 241, ../sass/styles.scss */
+  .headerMiddle img {
+    width: calc(50% - 1rem);
+  }
+
+  /* line 244, ../sass/styles.scss */
+  .accroche {
+    padding: 2rem 1rem;
   }
 }
 /* Taille d'ecran minimal 992px */
 @media screen and (min-width: 992px) {
   /* Nom clinique */
-  /* line 196, ../sass/styles.scss */
+  /* line 253, ../sass/styles.scss */
   .logo h1 {
     font-size: 1.8rem;
   }
@@ -274,9 +339,12 @@ section {
 /* Taille d'ecran minimal 1200px */
 @media screen and (min-width: 1200px) {
   /* Container centre navigation*/
-  /* line 204, ../sass/styles.scss */
-  .navigation {
+  /* line 261, ../sass/styles.scss */
+  .navigation,
+  .headerMiddle {
     width: 100rem;
     margin: auto;
   }
+
+  /* Container centre headeMiddle */
 }
