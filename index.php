@@ -49,21 +49,205 @@ declare(strict_types = 1);
       <!-- Container Navigation Global -->
      <div class="headerMiddle">
       <!-- Images illustratives -->
-      
         <img src="assets/images/docteur.svg" />
-
       <!-- Phrase d'accrode -->
       <div class="accroche">
-        <strong>Transformation num&eacute;rique de la clinique</strong>
-        <h2>Leader et Pionnier dans le domaine</h2>
+        <!-- <strong>Virage au num&eacute;rique</strong> -->
+        <strong>Traitement m&eacute;dical et chirurgical de qualit&eacute;</strong>
+        <h2>Leader et pionnier du domaine</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit sit aliquam, fuga blanditiis vero nemo repudiandae accusamus porro pariatur quod?</p>
+        <a href="#" class="btn-accroche"> Suivi m&eacute;dical</a>
       </div>
      </div>
     </header>
-    <section>
-      fhksdhf
+    <!-- Clinique -->
+    <section id="clinique">
+      <div class="sectionClinique">
+        <div class="sectionCliniqueGroup">
+          <div class="sectionCliniqueGroup__">
+           
+            <span class="fa-solid fa-user-doctor"></span>
+
+            <strong>Nos m&eacute;decins</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium veniam ad, aperiam voluptatum esse inventore dicta pariatur veritatis libero!</p>
+          </div>
+          <div class="sectionCliniqueGroup__">
+            <span class="fa-regular fa-newspaper"></span>
+              <strong>Actualit&eacute;s</strong>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium veniam ad, aperiam voluptatum esse inventore dicta pariatur veritatis libero!</p>
+          </div>
+          <div class="sectionCliniqueGroup__">
+            <span class="fa-regular fa-circle-play"></span>
+              <strong>Espace num&eacute;rique</strong>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium veniam ad, aperiam voluptatum esse inventore dicta pariatur veritatis libero!</p>
+          </div>
+          <div class="sectionCliniqueGroup__">
+            <span class="fa-regular fa-circle-play"></span>
+              <strong>&Eacute;v&eacute;nements</strong>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium veniam ad, aperiam voluptatum esse inventore dicta pariatur veritatis libero!</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- Fin Header -->
+    <!-- Fin clinique -->
+    <!-- Equipe -->
+    <section id="equipe">
+    
+      <div class="equipe">
+          <h3>Notre &eacute;quipe</h3>
+          
+          <div class="equipe__group">
+            <!-- Equipe #1 -->
+          <div class="equipe__bloc">
+            <span>PHD.</span>
+            <p class="equipe__img">
+              <img src="assets/images/jean-claude-cadet.jpg" alt="Jean Claude Cadet">
+            </p>
+            <strong>Jean Claude Cadet</strong>
+            <span>Ophtalmologue</span>
+            <div class="equipe__socialmedia">
+              <p>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-regular fa-envelope"></i>
+              </p>
+            </div>
+          </div>
+          <!-- Equipe #2 -->
+          <div class="equipe__bloc">
+            <span>MD.</span>
+            <p class="equipe__img">
+              <img src="assets/images/claudy-cadet.jpg" alt="Claudy Cadet">
+            </p>
+            <strong>E.M. Claude Cadet</strong>
+            <span>Ophtalmologue</span>
+            <div class="equipe__socialmedia">
+              <p>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-regular fa-envelope"></i>
+              </p>
+            </div>
+          </div>
+          <!-- Equipe #3 -->
+          <div class="equipe__bloc">
+            <span>MD.</span>
+            <p class="equipe__img">
+              <img src="assets/images/valerie-cadet.jpg" alt="Jean Claude Cadet">
+            </p>
+            <strong>M. Val&eacute;rie Cadet</strong>
+            <span>Ophtalmologue</span>
+            <div class="equipe__socialmedia">
+              <p>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-regular fa-envelope"></i>
+              </p>
+            </div>
+          </div>
+          <!-- Equipe #4 -->
+          <div class="equipe__bloc">
+            <span>MD.</span>
+            <p class="equipe__img">
+              <img src="assets/images/stephane.jpg" alt="Stephane Cadet">
+            </p>
+            <strong>J. St&eacute;phane Cadet</strong>
+            <span>Ophtalmologue</span>
+            <div class="equipe__socialmedia">
+              <p>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-regular fa-envelope"></i>
+              </p>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+    <!-- Fin Equipe -->
+    <!-- Services -->
+    <section id="services">
+      <!-- Wrapper services -->
+      <div class="services">
+         <!-- Service top -->
+      <div class="services__top">
+        <div class="services__left">
+          <div class="services__left_wrapper">
+            <!-- Service #1 -->
+            <div class="services__left__box">
+              <div class="container__services">
+                <span class="far fa-building"></span>
+                <div class="services__left__box__label">
+                <span>Administration</span>
+                </div>
+               
+              </div>
+          </div>
+          <!-- Fin #1 -->
+          <div class="container__top">
+            <div class="services__left__box">
+            <div class="container__services">
+              <span class="fas fa-clinic-medical"></span>
+              <div class="services__left__box__label">
+                <span>Clinique</span>
+                </div>
+            </div>
+            </div>
+            <div class="services__left__box">
+            <div class="container__services">
+              <span class="fas fa-cut"></span>
+              <div class="services__left__box__label">
+                <span>Chirurgies</span>
+                </div>
+            </div>
+            </div>
+          </div>
+          <div class="container__top">
+            <!-- Service #2 -->
+            <div class="services__left__box">
+            <div class="container__services">
+              <span class="fas fa-notes-medical"></span>
+              <div class="services__left__box__label">
+                <span>Pharmacie</span>
+                </div>
+            </div>
+            </div>
+            <div class="services__left__box">
+            <div class="container__services">
+              <span class="fas fa-glasses"></span>
+              <div class="services__left__box__label">
+                <span>Lunettrie</span>
+                </div>
+            </div>
+            </div>
+            <div class="services__left__box">
+            <div class="container__services">
+              <span class="fas fa-diagnoses"></span>
+              <div class="services__left__box__label">
+                <span>Examen</span>
+                </div>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="services__right">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum facere dolores eaque inventore eos nam perferendis. Delectus tempora beatae distinctio facilis explicabo earum voluptatem.</p>
+        </div>
+      </div>
+      <div class="services__bottom">
+        <h3>Services diversifi&eacute;s</h3>
+        <span>Pour une client&egrave;le de choix</span>
+        <hr />
+      </div>
+      </div>
+      
+    </section>
+    <!-- Fin Service -->
   </div>
 
 

@@ -8,10 +8,9 @@ body{
   letter-spacing: 0.1rem;
   font-family: sans-serif;
   background-color: #fbfbfb;
+  line-height: 1.5;
 }
-section{
-  height: 100vh;
-}
+
 /* Container global*/
 .wrapper{
   width: 100%;
@@ -91,7 +90,7 @@ section{
 /* Menu */
 .menu{
   width: 20rem;
-  height: 100vh;
+  height: 50rem;
   padding-top: 4rem;
   padding-left: 0;
   position: absolute;
@@ -138,16 +137,258 @@ section{
 }
 .headerMiddle{
   padding: 3rem 1rem;
+  text-align: center;
 }
 .headerMiddle strong{
   display: block;
-  margin: 2rem 0;
+  margin-top: 3rem;
+  font-size: 2.1rem;
   font-weight: normal;
-  font-size: 1.8rem;
+  line-height: 1.5;
+  color: $couleurprimaire;
 }
 .headerMiddle h2{
-  font-size: 1.8rem;  
+  font-size: 1.8rem;
   font-weight: bold;
+  line-height: 1.5;
+  margin: 1rem 0 3rem 0;
+  color: $couleursecondaire;
+}
+.headerMiddle p{
+  line-height: 1.5;
+}
+/* Accroche */
+.accroche{
+  padding-top: 3rem;
+}
+.btn-accroche{
+  display: block;
+  width: 16rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 3rem auto;
+  border: 0.1rem solid $couleurtertiaire;
+  text-decoration: none;
+  color: $couleurtertiaire;
+}
+#clinique{
+  // background-color:#801cba;
+  background-color: #590e85;
+  padding: 3rem 1rem;
+}
+.sectionCliniqueGroup__{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  margin:0 auto 2rem;
+  color: $couleurwhite;
+  border: 0.1rem solid rgba(255,255,255,0.2);
+}
+.sectionCliniqueGroup__ span{
+  font-size: 5.2rem;
+}
+.sectionCliniqueGroup__ strong{
+  font-size: 2.2rem;
+}
+.sectionCliniqueGroup__ p{
+  text-align: center;
+}
+/* Equipe */
+
+.equipe{
+  padding: 6rem 1rem;
+}
+.equipe h3{
+  font-size: 2.4rem;
+  margin-bottom: 6rem;
+  color: $couleurtertiaire;
+}
+.equipe__bloc{
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border: 0.1rem solid #eeeded;
+  position: relative;
+  overflow-y: hidden;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.equipe__bloc span:nth-child(1){
+  align-self: flex-end;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  background-color:#590e85;
+  color: $couleurwhite;
+  border-radius: 0.5rem;
+}
+.equipe__bloc .equipe__img{
+  width: 10rem;
+  margin-top: 2rem;
+  padding: 0.2rem;
+  border: 0.1rem solid #eeeded;
+  border-radius: 50%;
+}
+.equipe__bloc img{
+  width: 100%;
+  border-radius: 50%;
+}
+.equipe__bloc strong{
+  font-size: 1.8rem;
+  color:#590e85;
+  line-height: 1;
+  font-weight: normal;
+}
+.equipe__bloc strong + span{
+  font-size: 1.2rem;
+  opacity: 0.5;
+  line-height: 1;
+}
+.equipe__socialmedia p{
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  position: absolute;
+  transform: translateY(4rem);
+  height: 3rem;
+  padding: 0.5rem;
+  width: 100%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  opacity: 0.75;
+  transition: transform 0.3s ease-in;
+}
+.equipe__bloc.active .equipe__socialmedia p{
+  transform: translateY(0);
+}
+.equipe__socialmedia p i{
+  color: #590e85;
+  cursor: pointer;
+}
+/* Fin Equipe */
+#services{
+  background-color: $couleurtertiaire;
+}
+.services{
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 3rem 1rem;
+  color: $couleurwhite;
+  min-width: 30rem;
+}
+.services__left__box__label{
+   position: absolute;
+transform: translateY(-10rem);
+font-size: 1rem;
+background: $couleurprimaire;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+ 
+}
+.container__services.active .services__left__box__label{
+transform: translateY(0);
+ transition: transform 0.3s ease-in;
+}
+.services__left_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container__top{
+  display: flex;
+  flex-direction: row;
+  margin-top: -3rem;
+}
+.services__right{
+  margin-top: 3rem;
+}
+.services__left__box{
+  width: 10rem;
+  height: 10rem;
+  padding: 0.1rem;
+  border: 0.1rem solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.7);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.container__services{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $couleurtertiaire;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.container__services > span{
+  color: rgba(255,255,255,0.7);
+  font-size: 4.2rem;
+}
+.services__left_wrapper{
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.services__bottom{
+  padding: 3rem 0;
+}
+.services__bottom h3{
+  font-size: 2.4rem;
+  color: $couleurprimaire;
+}
+.services__bottom span{
+  font-size: 1.4rem;
+}
+.services__bottom hr{
+  display: none;
+  border-bottom:0.2rem solid $couleurbleuciel;
+  opacity: 1;
+}
+
+/* Taille d'ecran minimal 576px */
+@media screen and(min-width:#{$smallDevice * 1px}) {
+  .sectionCliniqueGroup{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .sectionCliniqueGroup__{
+    width: calc(50% - 1rem);
+  }
+  /* Equipe */
+.equipe__group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+ }
+ .equipe__bloc{
+  width: calc(50% - 1rem);
+ }
+  .services__left__box{
+    width: 14rem;
+    height: 14rem;
+  }
+  .services__left__box__label{
+    transform: translateY(-14rem);
+    }
+    .container__top{
+      margin-top: -4.2rem;
+    }
 }
 
 /* Taille d'ecran minimal 768px */
@@ -158,6 +399,11 @@ section{
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 2;
+}
+/*Clinique*/
+.sectionClinique{
+  padding: 3rem 2rem;
 }
 
 .navigation{
@@ -209,12 +455,6 @@ section{
 .menu li:nth-child(4):hover a{
   color: $couleurtertiaire;
 }
-// .menu li:nth-child(5),
-// .menu li:nth-child(6),
-// .menu li:nth-child(7){
-// padding-left:0.5rem;
-// padding-right: 0.5rem;
-// }
 .menu a span + span{
   display: none;
   margin-left: 0;
@@ -233,36 +473,99 @@ section{
 }
 /* HeaderMiddle */
 .headerMiddle{
- display: flex;
- gap: 2rem;
- padding: 6rem 1rem 3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  padding: 6rem 1rem 3rem 1rem;
+    text-align: left;
 }
-
 .headerMiddle img{
   width: calc(50% - 1rem);
 }
 .accroche{
-  padding: 2rem 1rem; 
-}
+  width: calc(50% - 1rem);
 }
 
+.accroche{
+  padding: 2rem 1rem; 
+}
+.accroche strong{
+  font-size: 2.8rem;
+}
+.accroche h2{
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  font-weight: normal;
+}
+/* Bouton btn-accroche */
+.btn-accroche{
+  width: 16rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* Equipe */
+.equipe__group{
+  gap: 3rem;
+ }
+ .equipe__bloc{
+  width: calc(50% - 1.5rem);
+  margin-bottom: 3rem;
+ }
+.services__top{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.services{
+  flex-direction: column;
+}
+.services__bottom{
+  margin-top: -13.6rem;
+}
+.services__left{
+  width: calc(70% - 1rem);
+  padding-right: 5rem;
+}
+.services__bottom hr{
+  display: block;
+}
+.container__services.active .services__left__box__label{
+  font-size: 1.4rem;
+}
+}
 
 /* Taille d'ecran minimal 992px */
 @media screen and (min-width:#{$largeDevice * 1px}){
+   /* Container centre navigation*/
+   .navigation,
+   .headerMiddle,
+   .sectionClinique,
+   .services,
+   .equipe{
+     width: 98rem;
+     margin: auto;
+   }
     /* Nom clinique */
   .logo h1{
     font-size: 1.8rem;
   }
+ /* Equipe */
+ .equipe__group{
+  gap: 1rem;
+ }
+ .equipe__bloc{
+  width: calc(25% - 1rem);
+  margin-bottom: 0;
+ }
 }
 
 /* Taille d'ecran minimal 1200px */
 @media screen and (min-width:#{$XlargeDevice * 1px}){
-  /* Container centre navigation*/
-  .navigation,
-  .headerMiddle{
-    width: 100rem;
-    margin: auto;
-  }
+ 
   /* Container centre headeMiddle */
-
+  .sectionCliniqueGroup{
+    gap: 0.5rem;
+  }
+  .sectionCliniqueGroup__{
+    width: calc(25% - 1rem);
+  }
 }
