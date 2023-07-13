@@ -7,14 +7,23 @@ body{
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   font-family: sans-serif;
-  background-color: #fbfbfb;
+  background-color: #f7f7f7;
   line-height: 1.5;
 }
-
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  color: inherit;
+}
 /* Container global*/
 .wrapper{
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 /* Container Header Global */
 
@@ -45,7 +54,12 @@ body{
 /* Nom clinique */
 .logo h1{
   font-size: 1.4rem;
-  color: #fff;
+  color: $couleurwhite;
+  margin: 0;
+}
+.logo a{
+  text-decoration: none;
+  color: inherit;
 }
 /* Menuburger */
 .menuburger{
@@ -111,7 +125,7 @@ body{
 }
 .menu a{
   text-decoration: none;
-  color: $couleurwhite;
+  color: $couleurwhitedark;
   transition: color 0.3s ease-in;
 }
 .menu a span + span{
@@ -173,8 +187,39 @@ body{
 }
 #clinique{
   // background-color:#801cba;
-  background-color: #590e85;
+  background-color: $couleurtertiairelight;
   padding: 3rem 1rem;
+}
+.sectionCliniqueGroup{
+  overflow: hidden;
+}
+.sectionCliniqueGroup__:nth-child(1){
+  transform: translateX(-150%);
+  transition: transform 0.3s 0.2s ease-in;
+}
+.sectionCliniqueGroup__:nth-child(2){
+  transform: translateX(-250%);
+  transition: transform 0.3s ease-in;
+}
+.sectionCliniqueGroup__:nth-child(3){
+  transform: translateX(250%);
+  transition: transform 0.3s 0.3s ease-in;
+}
+.sectionCliniqueGroup__:nth-child(4){
+  transform: translateX(300%);
+  transition: transform 0.3s 0.4s ease-in;
+}
+.sectionCliniqueGroup__.show:nth-child(1){
+  transform: translateX(0);
+}
+.sectionCliniqueGroup__.show:nth-child(2){
+  transform: translateX(0);
+}
+.sectionCliniqueGroup__.show:nth-child(3){
+  transform: translateX(0);
+}
+.sectionCliniqueGroup__.show:nth-child(4){
+  transform: translateX(0);
 }
 .sectionCliniqueGroup__{
   display: flex;
@@ -183,14 +228,14 @@ body{
   gap: 2rem;
   padding: 3rem 1rem;
   margin:0 auto 2rem;
-  color: $couleurwhite;
+  color: $couleurwhitedark;
   border: 0.1rem solid rgba(255,255,255,0.2);
 }
 .sectionCliniqueGroup__ span{
   font-size: 5.2rem;
 }
 .sectionCliniqueGroup__ strong{
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 .sectionCliniqueGroup__ p{
   text-align: center;
@@ -202,7 +247,7 @@ body{
 }
 .equipe h3{
   font-size: 2.4rem;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   color: $couleurtertiaire;
 }
 .equipe__bloc{
@@ -213,8 +258,8 @@ body{
   gap: 1rem;
   align-items: center;
   padding: 2rem 1rem;
-  background-color: #fff;
-  border: 0.1rem solid #eeeded;
+  background-color: $couleurwhite;
+  border: 0.1rem solid $bordercontainer;
   position: relative;
   overflow-y: hidden;
   cursor: pointer;
@@ -225,7 +270,7 @@ body{
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.5rem;
-  background-color:#590e85;
+  background-color:$couleurtertiairelight;
   color: $couleurwhite;
   border-radius: 0.5rem;
 }
@@ -233,7 +278,7 @@ body{
   width: 10rem;
   margin-top: 2rem;
   padding: 0.2rem;
-  border: 0.1rem solid #eeeded;
+  border: 0.1rem solid $bordercontainer;
   border-radius: 50%;
 }
 .equipe__bloc img{
@@ -242,7 +287,7 @@ body{
 }
 .equipe__bloc strong{
   font-size: 1.8rem;
-  color:#590e85;
+  color:$couleurtertiairelight;
   line-height: 1;
   font-weight: normal;
 }
@@ -264,14 +309,14 @@ body{
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  opacity: 0.75;
+  opacity: 0.45;
   transition: transform 0.3s ease-in;
 }
 .equipe__bloc.active .equipe__socialmedia p{
   transform: translateY(0);
 }
 .equipe__socialmedia p i{
-  color: #590e85;
+  color: $couleurtertiairelight;
   cursor: pointer;
 }
 /* Fin Equipe */
@@ -281,21 +326,21 @@ body{
 .services{
   display: flex;
   flex-direction: column-reverse;
-  padding: 3rem 1rem;
-  color: $couleurwhite;
+  padding: 6rem 1rem;
+  color: $couleurwhitedark;
   min-width: 30rem;
 }
 .services__left__box__label{
-   position: absolute;
-transform: translateY(-10rem);
-font-size: 1rem;
-background: $couleurprimaire;
-width: 100%;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: bold;
+  position: absolute;
+  transform: translateY(-10rem);
+  font-size: 1rem;
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
  
 }
 .container__services.active .services__left__box__label{
@@ -359,6 +404,312 @@ transform: translateY(0);
   border-bottom:0.2rem solid $couleurbleuciel;
   opacity: 1;
 }
+/* Galeries */
+.galeries{
+  display: grid;
+  min-width: 30rem;
+  grid-template-columns: 25% 15% 20% 40%;
+  grid-template-rows: repeat(25%, 4);
+  grid-template-areas: "g1 g1 g2 g3"
+                       "g4 g5 g5 g3"
+                       "g6 g7 g7 g10"
+                       "g8 g8 g9 g10";
+}
+.galeries__img_1 { grid-area: g1; }
+.galeries__img_2 { grid-area: g2; }
+.galeries__img_3 { grid-area: g3; }
+.galeries__img_4 { grid-area: g4; }
+.galeries__img_5 { grid-area: g5; }
+.galeries__img_6 { grid-area: g6; }
+.galeries__img_7 { grid-area: g7; }
+.galeries__img_8 { grid-area: g8; }
+.galeries__img_9 { grid-area: g9; }
+.galeries__img_10 { grid-area: g10; }
+
+.galeries p{
+  border: 0.3rem solid $bordercontainer;
+  margin: 0;
+}
+.galeries img{
+  width: 100%;
+  height: 100%;
+  // object-position: top;
+  filter: grayscale(100%);
+  object-position: center center;
+  object-fit: cover;
+  transition: filter 0.3s ease-in;
+  cursor: pointer;
+}
+.galeries img:hover{
+  filter: grayscale(0);
+}
+/*
+* Contact
+*/
+#contact{
+  background: $couleurtertiaire;
+  color:$couleurwhitedark;
+}
+.contact__bloc form{
+  display: flex;
+  flex-direction: column;
+  margin: 6rem 0;
+}
+.contact{
+  padding: 6rem 1rem;
+  min-width: 30rem;
+}
+.contact h3{
+  font-size: 2.4rem;
+  margin-bottom: 6rem;
+}
+// textarea,input{
+//   outline: none;
+//   color: rgba(0,0,0,0.75);
+// }
+.contact__bloc textarea{
+  outline: none;
+  padding: 1rem;
+  height: 21rem;
+  margin-bottom: 1rem;
+}
+.contact__bloc textarea,
+.contact__bloc input[type="text"],
+.contact__bloc input[type="tel"],
+.contact__bloc input[type="email"]{
+  font-size: 1.4rem;
+  padding: 1rem;
+  width: 100%;
+  border: 0.1rem solid $couleurwhitedark;
+  color: $couleurtertiaire;
+  background: $couleurwhite;
+  margin-bottom: 1rem;  
+}
+.contact__bloc input[type="submit"]{
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: $couleurwhitedark;
+  border: 0.1rem solid $couleurwhitedark;
+}
+::placeholder{
+  color: $couleurtertiaire;
+}
+.contact__bloc address{
+  margin-top: 6rem;
+}
+.contact__bloc__left textarea{
+  width: 100%;
+  resize: none;
+}
+.contact__bloc__left p{
+  display: none;
+}
+.contact__bloc__right{
+  font-size: 1.4rem;
+}
+.contact__bloc__right strong{
+  color: $couleurwhitedark;
+}
+.contact__bloc__right i{
+  color:$couleurwhitedark;
+}
+// .contact__bloc__social{
+//   display: flex;
+//   padding: 1rem 0;
+//   gap: 1rem;
+// }
+// .contact__bloc__social i{
+//   font-size: 2.4rem;
+// }
+/*
+* Temoignages
+*/
+#temoignages{
+ padding: 6rem 1rem;
+}
+.temoignages h3{
+  color: $couleurprimaire;
+  font-size: 3.2rem;
+  margin-bottom: 3rem;
+}
+.temoignages__navigation{
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: calc(-100% + 4rem);
+  // color: rgba(0,0,0,0.3);
+  color: $couleurprimaire;
+  border: 0.1rem solid $bordercontainer;
+  background-color: $couleurwhite;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+.temoignages__bloc{
+  min-width: 30rem;
+  position: relative;
+}
+.temoignages__bloc__comments {
+  background: $couleurwhite;
+  position: relative;
+  // z-index: 10;
+}
+.temoignages__bloc__comments_user{
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border:0.1rem solid $bordercontainer;
+}
+.temoignages blockquote i{
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 2.8rem;
+  color: rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+blockquote p{
+  margin-bottom: 0;
+  padding: 0 2.5rem;
+}
+blockquote p + i{
+  text-align: right;
+}
+.temoignages cite{
+  display: block;
+  text-align: right;
+}
+.temoignages cite span::before{
+  content: "_";
+  font-size: 2rem;
+  // color: rgba(0,0,0,0.2);
+}
+.temoignages cite span{
+  font-size: 1.2rem;
+  font-style: italic;
+  color: $couleurprimaire;
+}
+.temoignages__bloc__design{
+  width: 3rem;
+  height: 3rem;
+  background-color: $couleurwhite;
+  border-right: 0.1rem solid $bordercontainer;
+  border-bottom: 0.1rem solid $bordercontainer;
+  position: relative;
+  transform: rotate(45deg);
+  top: -1.5rem;
+  left: 4rem;
+  display: none;
+  // z-index: 1;
+}
+.temoignages__bloc__profil{
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2.5rem;
+  padding: 0.2rem;
+  border: 0.1rem solid #eeeded;
+  background-color: $couleurwhite;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  top: -6rem;
+}
+.temoignages__bloc__profil img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  opacity: 0.75;
+}
+
+// .temoignages__bloc__group{
+//  transition: all 0.3s ease-in;
+//  width: 30rem;
+//  position: absolute;
+//  top: 0;
+// }
+
+// .temoignages__bloc__group:nth-child(1){
+//   // position: absolute;
+//   // top: 0;
+//   right: 0;
+// }
+// .temoignages__bloc__group:nth-child(2){
+//   // position: absolute;
+//   // top: 0;
+//   right: -101%;
+// }
+// .temoignages__bloc__group:nth-child(3){
+//   // position: absolute;
+//   // top: 0;
+//   right: -202%;
+// }
+// .temoignages__bloc__group:nth-child(4){
+//   // position: absolute;
+//   // top: 0;
+//   right: -303%;
+// }
+
+// .temoignages__bloc__group.active{
+//   position: relative;
+//   top: 0;
+//   right: 0;
+//   z-index: 1;
+// }
+
+
+// .temoignages__bloc__group{
+//  position: absolute;
+//  top: 0;
+//  left: 101%;
+//  min-width: 30rem;
+// transition:left 0.3s ease-in;
+// }
+
+// .temoignages__bloc__group.active{
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   min-width: 30rem;
+// }
+/*
+* Footer
+*/
+#footer{
+  border-top:0.1rem solid rgba(255,255,255,0.1);
+  padding: 2rem 1rem;
+  background-color: $couleurtertiaire;
+  color: $couleurwhitedark;
+}
+.footer{
+  min-width: 30rem;
+}
+.menufooter,
+.footer__social{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size:1.2rem;
+  padding: 0.5rem 0;
+}
+.footer__copyright{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size:1.2rem;
+  padding: 0.5rem 0;
+}
+.footer__copyright span:nth-child(3){
+  display: none;
+}
+.footer__social i{
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
 
 /* Taille d'ecran minimal 576px */
 @media screen and(min-width:#{$smallDevice * 1px}) {
@@ -389,6 +740,54 @@ transform: translateY(0);
     .container__top{
       margin-top: -4.2rem;
     }
+    /* Contact */
+    .contact__bloc address{
+      margin-top: 0;
+    }
+    .contact__bloc form{
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .contact__bloc__left{
+      width: 100%;
+    }
+    .contact__bloc__middle{
+      width: calc(60% - 1rem);
+    }
+    .contact__bloc__right{
+      width: calc(40% - 1rem);
+    }
+    .contact__bloc__right p{
+      min-width: 27rem;
+      line-height: 2;
+    }
+    /* Temoignages */
+.temoignages__bloc{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.temoignages__bloc__group{
+  width: calc(50% - 1rem);
+  margin-top: 2rem;
+}
+.temoignages__bloc__profil{
+  top: 0;
+}
+.temoignages__bloc__design{
+  display: block;
+}
+/* Footer */
+.footer__copyright{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2;
+}
+.footer__copyright span:nth-child(3){
+  display: inline;
+}
 }
 
 /* Taille d'ecran minimal 768px */
@@ -399,7 +798,7 @@ transform: translateY(0);
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 10;
 }
 /*Clinique*/
 .sectionClinique{
@@ -431,8 +830,9 @@ transform: translateY(0);
 .menu li{
   margin-bottom: 0;
   margin-left: 0.2rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  // padding-left: 1.25rem;
+  // padding-right: 1.25rem;
+ padding: 0; 
   border-bottom: 0 none;
   text-align: center;
 }
@@ -442,7 +842,10 @@ transform: translateY(0);
 .menu li.active a {
   color: $couleurtertiaire;
 }
-
+.menu li a{
+  display: block;
+  padding: 1.25rem;
+}
 .menu li:nth-child(1):hover,
 .menu li:nth-child(2):hover,
 .menu li:nth-child(3):hover,
@@ -484,13 +887,10 @@ transform: translateY(0);
 }
 .accroche{
   width: calc(50% - 1rem);
-}
-
-.accroche{
   padding: 2rem 1rem; 
 }
 .accroche strong{
-  font-size: 2.8rem;
+  font-size: 3.2rem;
 }
 .accroche h2{
   font-size: 2.4rem;
@@ -531,6 +931,48 @@ transform: translateY(0);
 .container__services.active .services__left__box__label{
   font-size: 1.4rem;
 }
+/* Galeries */
+.galeries{
+  grid-template-columns: 15% 20%  25% 25% 15%;
+  grid-template-rows: 25% 5% 20% 10% 40%;
+  grid-template-areas: "g1 g3 g5 g6 g10"
+                        "g2 g3 g5 g6 g10"
+                        "g2 g3 g7 g7 g10"
+                        "g4 g4 g7 g7 g10"
+                        "g4 g4 g8 g9 g10";
+}
+.contact__bloc form{
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.contact__bloc__left{
+  width: calc(40% - 1rem);
+  position: relative;
+}
+.contact__bloc__left p{
+  position: absolute;
+  display: block;
+  top: -3rem;
+  left: -10rem;
+  width: 100%;
+  z-index: 1;
+}
+.contact__bloc__left textarea{
+  position: relative;
+  // display: none;
+  z-index: 2;
+}
+.contact__bloc__middle{
+  width: calc(30% - 1rem);
+}
+.contact__bloc__right{
+  width: calc(30% - 1rem);
+}
+.contact__bloc address{
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
 }
 
 /* Taille d'ecran minimal 992px */
@@ -540,10 +982,14 @@ transform: translateY(0);
    .headerMiddle,
    .sectionClinique,
    .services,
-   .equipe{
+   .equipe,
+   .contact,
+   .temoignages,
+   .footer{
      width: 98rem;
      margin: auto;
    }
+ 
     /* Nom clinique */
   .logo h1{
     font-size: 1.8rem;
@@ -556,6 +1002,19 @@ transform: translateY(0);
   width: calc(25% - 1rem);
   margin-bottom: 0;
  }
+ .galeries{
+  height: 60rem;
+ }
+     /* Temoignages */
+.temoignages__bloc{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.temoignages__bloc__group{
+  width: calc(25% - 2rem);
+  margin-top: 2rem;
+}
 }
 
 /* Taille d'ecran minimal 1200px */
