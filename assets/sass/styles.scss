@@ -560,14 +560,16 @@ transform: translateY(0);
 }
 .temoignages__bloc__comments_user{
   padding: 0 1rem;
-  border-radius: 0.5rem;
+  // border-radius: 0.5rem;
   border:0.1rem solid $bordercontainer;
 }
 .temoignages blockquote i{
   display: block;
   padding: 0.5rem 0;
   font-size: 2.8rem;
-  color: rgba(0,0,0,0.1);
+  // color: rgba(0,0,0,0.1);
+  color: $couleurprimaire;
+  opacity: 0.3;
   cursor: pointer;
 }
 blockquote p{
@@ -607,7 +609,7 @@ blockquote p + i{
 .temoignages__bloc__profil{
   width: 5rem;
   height: 5rem;
-  margin-left: 2.5rem;
+  margin-left: 3rem;
   padding: 0.2rem;
   border: 0.1rem solid #eeeded;
   background-color: $couleurwhite;
@@ -624,56 +626,27 @@ blockquote p + i{
   opacity: 0.75;
 }
 
-// .temoignages__bloc__group{
-//  transition: all 0.3s ease-in;
-//  width: 30rem;
-//  position: absolute;
-//  top: 0;
-// }
+.temoignages__bloc{
+  display: flex;
+  gap: 0.5rem;
+}
 
-// .temoignages__bloc__group:nth-child(1){
-//   // position: absolute;
-//   // top: 0;
-//   right: 0;
-// }
-// .temoignages__bloc__group:nth-child(2){
-//   // position: absolute;
-//   // top: 0;
-//   right: -101%;
-// }
-// .temoignages__bloc__group:nth-child(3){
-//   // position: absolute;
-//   // top: 0;
-//   right: -202%;
-// }
-// .temoignages__bloc__group:nth-child(4){
-//   // position: absolute;
-//   // top: 0;
-//   right: -303%;
-// }
+.temoignages__bloc__group{
+  width: 96%;
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in;
+}
 
-// .temoignages__bloc__group.active{
-//   position: relative;
-//   top: 0;
-//   right: 0;
-//   z-index: 1;
-// }
+.posX102{
+  transform: translateX(-100%);
+}
+.posX204{
+  transform: translateX(-201%);
+}
+.posX306{
+  transform: translateX(-303%);
+}
 
-
-// .temoignages__bloc__group{
-//  position: absolute;
-//  top: 0;
-//  left: 101%;
-//  min-width: 30rem;
-// transition:left 0.3s ease-in;
-// }
-
-// .temoignages__bloc__group.active{
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   min-width: 30rem;
-// }
 /*
 * Footer
 */
@@ -778,6 +751,9 @@ blockquote p + i{
 .temoignages__bloc__design{
   display: block;
 }
+.temoignages__navigation{
+  display: none;
+}
 /* Footer */
 .footer__copyright{
   display: flex;
@@ -793,6 +769,17 @@ blockquote p + i{
 /* Taille d'ecran minimal 768px */
 @media screen and (min-width:#{$mediumDevice * 1px}){
 /* Navigation */
+.navigation,
+   .headerMiddle,
+   .sectionClinique,
+   .services,
+   .equipe,
+   .contact,
+   .temoignages,
+   .footer{
+     padding-left: 2rem;
+     padding-right: 2rem;
+   }
 .headerTop{
   width: 100%;
   position: fixed;
@@ -972,7 +959,6 @@ blockquote p + i{
   margin-top: 0;
   font-size: 1.2rem;
 }
-
 }
 
 /* Taille d'ecran minimal 992px */
@@ -1009,7 +995,7 @@ blockquote p + i{
 .temoignages__bloc{
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 .temoignages__bloc__group{
   width: calc(25% - 2rem);

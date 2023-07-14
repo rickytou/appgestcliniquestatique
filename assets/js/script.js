@@ -64,43 +64,96 @@ $(function(){
       $('.sectionCliniqueGroup__:nth-child(4)').addClass('show');
     }
     else if(window.scrollY >= (services.offsetTop - minus) && this.window.scrollY <= (services.offsetTop + services.scrollHeight)){
-      //$('.menu li').removeClass('active');
       $('a[href="#services"]').parent().addClass('active'); 
     } 
     else if(window.scrollY >= (galeries.offsetTop - minus) && this.window.scrollY <= (galeries.offsetTop + galeries.scrollHeight)){
-      //$('.menu li').removeClass('active');
       $('a[href="#galeries"]').parent().addClass('active'); 
     }
     else if(window.scrollY >= (contact.offsetTop - minus) && this.window.scrollY <= (contact.offsetTop + contact.scrollHeight)){
-      //$('.menu li').removeClass('active');
       $('a[href="#contact"]').parent().addClass('active'); 
     }
-    //  console.log(window.scrollY, "/" ,equipe.offsetTop);
+    else if(window.scrollY >= (temoignages.offsetTop - minus) && this.window.scrollY <= (temoignages.offsetTop + temoignages.scrollHeight)){
+      $('a[href="#temoignages"]').parent().addClass('active'); 
+    }
   });
 
   /**
    * Defilement des temoignages
    */
   
+//   $('.temoignages__navigation').on('click',function(){
+//     var temoignages = $('.temoignages__bloc__group');
+//     var compteur;
+//     var next;
+//     $.each(temoignages, function(index, temoignage){
+//      if(temoignage.classList.contains('active')){
+//       temoignage.classList.remove('active');
+//       compteur = index;
+//     }
+
+//   });
+//   if(compteur < temoignages.length - 1){
+//   next = temoignages[compteur + 1];
+//   }
+//   else{
+//     next = temoignages[0];
+//   }
+ 
+//   console.log(next);
+//   next.classList.add('active');
+// });
+
+/**
+ * Modification de la section temoignages
+ */
   $('.temoignages__navigation').on('click',function(){
     var temoignages = $('.temoignages__bloc__group');
     var compteur;
     var next;
     $.each(temoignages, function(index, temoignage){
      if(temoignage.classList.contains('active')){
+      if(index == 0){
+        temoignages[index].classList.add('posX102');
+      }else if(index == 1){
+        temoignages[index].classList.add('posX204');
+      }
+      else if(index == 2){
+        temoignages[index].classList.add('posX306');
+      }
+      else{
+        temoignages[0].classList.remove('posX102');
+        temoignages[1].classList.remove('posX102');
+        temoignages[1].classList.remove('posX204');
+        temoignages[2].classList.remove('posX306');
+        temoignages[2].classList.remove('posX204');
+        temoignages[3].classList.remove('posX306');
+      }
       temoignage.classList.remove('active');
       compteur = index;
     }
 
   });
   if(compteur < temoignages.length - 1){
-  next = temoignages[compteur + 1];
+    next = temoignages[compteur + 1];
+    /* Deplacement du bloc temoignage */
+    if(compteur == 0){
+      next.classList.add('posX102');
+    }
+    else if(compteur == 1){
+      next.classList.add('posX204');
+    }
+    else if(compteur == 2){
+      next.classList.add('posX306');
+    }
   }
   else{
     next = temoignages[0];
+    // temoignages[0].classList.remove('posX102');
+    // emoignages[0].classList.remove('posX102');
+    // emoignages[0].classList.remove('posX102');
   }
- 
-  console.log(next);
-  next.classList.add('active');
+ next.classList.add('active');
 });
+
+
 });
