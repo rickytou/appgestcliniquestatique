@@ -106,54 +106,53 @@ $(function(){
 /**
  * Modification de la section temoignages
  */
-  $('.temoignages__navigation').on('click',function(){
+/**
+ * Evenement sur la navigation a droite pour la section temoignages
+ */
+  $('.temoignages__navigation__right').on('click',function(){
     var temoignages = $('.temoignages__bloc__group');
+    var tem;
     var compteur;
-    var next;
-    $.each(temoignages, function(index, temoignage){
-     if(temoignage.classList.contains('active')){
-      if(index == 0){
-        temoignages[index].classList.add('posX102');
-      }else if(index == 1){
-        temoignages[index].classList.add('posX204');
+    $.each(temoignages, function(index,temoignage){
+      if(temoignage.classList.contains('active')){
+        $(temoignage).removeClass('active');
+        compteur = index;   
+        tem = temoignage;    
+      }      
+    });
+    if(compteur < temoignages.length - 1){
+    var t = $(tem);
+    var trans = (compteur+1) * -102 +'%'; 
+      $(t).css('transform','translateX('+trans+')');
+      $(t).next().addClass('active');
+      $(t).nextAll().css('transform','translateX('+trans+')');
+      if((compteur == temoignages.length - 2)){
+        $(this).removeClass('active');
+        $('.temoignages__navigation__left').addClass('active');
       }
-      else if(index == 2){
-        temoignages[index].classList.add('posX306');
-      }
-      else{
-        temoignages[0].classList.remove('posX102');
-        temoignages[1].classList.remove('posX102');
-        temoignages[1].classList.remove('posX204');
-        temoignages[2].classList.remove('posX306');
-        temoignages[2].classList.remove('posX204');
-        temoignages[3].classList.remove('posX306');
-      }
-      temoignage.classList.remove('active');
-      compteur = index;
-    }
-
-  });
-  if(compteur < temoignages.length - 1){
-    next = temoignages[compteur + 1];
-    /* Deplacement du bloc temoignage */
-    if(compteur == 0){
-      next.classList.add('posX102');
-    }
-    else if(compteur == 1){
-      next.classList.add('posX204');
-    }
-    else if(compteur == 2){
-      next.classList.add('posX306');
-    }
-  }
-  else{
-    next = temoignages[0];
-    // temoignages[0].classList.remove('posX102');
-    // emoignages[0].classList.remove('posX102');
-    // emoignages[0].classList.remove('posX102');
-  }
- next.classList.add('active');
+    } 
 });
 
+/**
+ * Evenement sur la navigation a gauche pour la section temoignages
+ */
+$('.temoignages__navigation__left').on('click',function(){
+ var compteur; 
+ var temoignages = $('.temoignages__bloc__group');
+  $.each(temoignages, function(index,temoignage){
+    if(temoignage.classList.contains("active")){
+      $(temoignage).removeClass('active');
+      }
+      $(temoignage).css('transform','translateX(0)');
+      
+  });
+  temoignages[0].classList.add('active');
+  $(this).removeClass('active');
+  $('.temoignages__navigation__right').addClass('active');
+
+
+  
+    
+});
 
 });

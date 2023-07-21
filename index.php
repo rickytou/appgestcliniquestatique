@@ -7,6 +7,7 @@ declare(strict_types = 1);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La clinique Jeannot Cadet vieille d'une vingtaine d'annees est specialisee dans le traitement des maladies liees aux yeux, nez, gorge, oreille. La clinique possede une large gamme de services pour desservir sa clientele" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/styles.css" />
@@ -71,47 +72,49 @@ declare(strict_types = 1);
         <!-- <strong>Virage au num&eacute;rique</strong> -->
         <strong>Traitement m&eacute;dical et <br />chirurgical de qualit&eacute;</strong>
         <h2>Leader et pionnier du domaine</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit sit aliquam, fuga blanditiis vero nemo repudiandae accusamus porro pariatur quod?</p>
+        <p>La clinique ophtalmologique Jeannot Cadet, l'une des cliniques les plus r&eacute;put&eacute;s du pays utilise des technologies &agrave; la fine pointe de la technologie.</p>
         <a href="#" class="btn-accroche"> Suivi m&eacute;dical</a>
       </div>
      </div>
     </header>
-    <!-- Clinique -->
+    <!-- Section Clinique Wrapper -->
     <section id="clinique">
       <div class="sectionClinique">
         <div class="sectionCliniqueGroup">
+          <!-- SectionCliniqueGroup__#1 -->
           <div class="sectionCliniqueGroup__">
-           
-            <span class="fa-solid fa-user-doctor"></span>
-
-            <strong>Nos m&eacute;decins</strong>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium veniam ad, aperiam voluptatum esse inventore dicta pariatur veritatis libero!</p>
+            <span class="fa-regular fa-clock"></span>
+            <strong>Horaire</strong>
+            <p>Les heures de fonctionnement de la clinique sont variées tant pour la partie privée que pour la partie sociale. Une équipe dévouée est disponible sur les différentes pour vous accueillir à tout moment.</p>
           </div>
+          <!-- SectionCliniqueGroup__#2 -->
           <div class="sectionCliniqueGroup__">
             <span class="fa-regular fa-newspaper"></span>
               <strong>Actualit&eacute;s</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium veniam ad, aperiam voluptatum esse inventore dicta pariatur veritatis libero!</p>
+              <p>Toutes les activités tant dans la clinique qu'à l’extérieur, les cliniques mobiles réalisées dans la capitale et dans les zones rurales du pays pour les personnes les plus démunies et à faible revenu.</p>
           </div>
+          <!-- SectionCliniqueGroup__#3 -->
           <div class="sectionCliniqueGroup__">
             <span class="fa-regular fa-circle-play"></span>
               <strong>Espace num&eacute;rique</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium veniam ad, aperiam voluptatum esse inventore dicta pariatur veritatis libero!</p>
+              <p>Nous partageons nos connaissances dans les interventions médiatiques, dans la formation post-universitaire, dans l'enseignement et dans les opérations chirurgicales.</p>
           </div>
+          <!-- SectionCliniqueGroup__#4 -->
           <div class="sectionCliniqueGroup__">
-            <span class="fa-regular fa-circle-play"></span>
+            <span class="fa-regular fa-calendar-days"></span>
               <strong>&Eacute;v&eacute;nements</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium veniam ad, aperiam voluptatum esse inventore dicta pariatur veritatis libero!</p>
+              <p>Nos services de consultation mobile &agrave; l'int&eacute;rieur et &agrave; l'ext&eacute;rieur de la clinique sont r&eacute;alis&eacute;ees mensuellement. Nos partenaires nationaux travaillent dans les endroits recul&eacute;s du pays. </p>
           </div>
         </div>
       </div>
     </section>
     <!-- Fin clinique -->
-    <!-- Equipe -->
+    <!-- Section Equipe Wrapper -->
     <section id="equipe">
-    
       <div class="equipe">
+        <!-- Titre de la section -->
           <h3>Notre &eacute;quipe</h3>
-          
+          <!-- Equipe__group__bloc#1 -->
           <div class="equipe__group">
             <!-- Equipe #1 -->
           <div class="equipe__bloc">
@@ -130,7 +133,7 @@ declare(strict_types = 1);
               </p>
             </div>
           </div>
-          <!-- Equipe #2 -->
+          <!-- Equipe__group__bloc#2 -->
           <div class="equipe__bloc">
             <span>MD.</span>
             <p class="equipe__img">
@@ -147,7 +150,7 @@ declare(strict_types = 1);
               </p>
             </div>
           </div>
-          <!-- Equipe #3 -->
+          <!-- Equipe__group__bloc#3 -->
           <div class="equipe__bloc">
             <span>MD.</span>
             <p class="equipe__img">
@@ -164,7 +167,7 @@ declare(strict_types = 1);
               </p>
             </div>
           </div>
-          <!-- Equipe #4 -->
+         <!-- Equipe__group__bloc#4 -->
           <div class="equipe__bloc">
             <span>MD.</span>
             <p class="equipe__img">
@@ -185,9 +188,8 @@ declare(strict_types = 1);
       </div>
     </section>
     <!-- Fin Equipe -->
-    <!-- Services -->
+    <!-- Section Services Wrapper -->
     <section id="services">
-      <!-- Wrapper services -->
       <div class="services">
          <!-- Service top -->
       <div class="services__top">
@@ -252,7 +254,7 @@ declare(strict_types = 1);
           </div>
         </div>
         <div class="services__right">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum facere dolores eaque inventore eos nam perferendis. Delectus tempora beatae distinctio facilis explicabo earum voluptatem.</p>
+         <p>Une large gamme de services sont disponibles au local de la clinique pour desservir notre commnunaut&eacute;. Les examens m&eacute;dicaux et les op&eacute;rations chirurgicales sont r&eacute;alis&eacute;s sur place. La clinique poss&egrave;de &eacute;galement une boutique de lunetterie exposant des montures tendances et de marque.</p>
         </div>
       </div>
       <div class="services__bottom">
@@ -261,9 +263,9 @@ declare(strict_types = 1);
         <hr />
       </div>
       </div>
-      
     </section>
     <!-- Fin Service -->
+    <!-- Section Galerie Wrapper  -->
     <section id="galeries">
       <div class="galeries">
         <p class="galeries__img_1"><img src="assets/images/img-1.jpeg"</p>
@@ -278,16 +280,24 @@ declare(strict_types = 1);
         <p class="galeries__img_10"><img src="assets/images/img-10.jpeg"</p>
       </div>
     </section>
-     <!-- Temoignages -->
+    <!-- Fin Galeries -->
+     <!-- Section Temoignages Wrapper -->
      <section id="temoignages">
       <div class="temoignages">
+        <!-- Titre de la section -->
         <h3>
           Ce que disent <span>nos visiteurs ?</span>
         </h3>
         <!-- Temoignages [Zone de navigation] -->
-        <p class="temoignages__navigation">
-          <i class="fa-solid fa-arrow-right"></i>
-        </p>
+        <div class="temoignages__navigation__bloc">
+        <p class="temoignages__navigation temoignages__navigation__left">
+            <i class="fa-solid fa-arrow-left"></i>
+          </p>
+          <p class="temoignages__navigation temoignages__navigation__right active">
+            <i class="fa-solid fa-arrow-right"></i>
+          </p>
+          
+        </div>
         <!-- Bloc de temoignages -->
         <div class="temoignages__bloc">
           <!-- Temoignages comments [Temoignages1] -->
@@ -296,7 +306,7 @@ declare(strict_types = 1);
                 <div class="temoignages__bloc__comments_user">
                   <blockquote>
                   <i class="fa-solid fa-quote-left"></i>
-                    <p>CLorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
                     </p>
                     <i class="fa-solid fa-quote-right"></i>
                     <cite>
@@ -320,7 +330,7 @@ declare(strict_types = 1);
                 <div class="temoignages__bloc__comments_user">
                   <blockquote>
                   <i class="fa-solid fa-quote-left"></i>
-                    <p>VLorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
                     </p>
                     <i class="fa-solid fa-quote-right"></i>
                     <cite>
@@ -344,7 +354,7 @@ declare(strict_types = 1);
                 <div class="temoignages__bloc__comments_user">
                   <blockquote>
                   <i class="fa-solid fa-quote-left"></i>
-                    <p>JLorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
                     </p>
                     <i class="fa-solid fa-quote-right"></i>
                     <cite>
@@ -368,7 +378,7 @@ declare(strict_types = 1);
                 <div class="temoignages__bloc__comments_user">
                   <blockquote>
                   <i class="fa-solid fa-quote-left"></i>
-                    <p>JLorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
                     </p>
                     <i class="fa-solid fa-quote-right"></i>
                     <cite>
@@ -386,25 +396,121 @@ declare(strict_types = 1);
             </div>
           <!-- Fin -->
 
+           <!-- Temoignages comments [Temoignages5] -->
+           <div class="temoignages__bloc__group">
+              <div class="temoignages__bloc__comments">
+                <div class="temoignages__bloc__comments_user">
+                  <blockquote>
+                  <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
+                    </p>
+                    <i class="fa-solid fa-quote-right"></i>
+                    <cite>
+                      <span>Steeve Doe</span>
+                    </cite>
+                  </blockquote>
+                </div>
+              </div>
+              <!-- Temoignages bloc design -->
+              <div class="temoignages__bloc__design"></div>
+              <!-- Temoignages profil de l'utilisateur -->
+              <div class="temoignages__bloc__profil">
+                  <img src="assets/images/avatar.png" alt="avatar"/>    
+              </div>
+            </div>
+          <!-- Fin -->
 
+           <!-- Temoignages comments [Temoignages6] -->
+           <div class="temoignages__bloc__group">
+              <div class="temoignages__bloc__comments">
+                <div class="temoignages__bloc__comments_user">
+                  <blockquote>
+                  <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
+                    </p>
+                    <i class="fa-solid fa-quote-right"></i>
+                    <cite>
+                      <span>Bryan Doe</span>
+                    </cite>
+                  </blockquote>
+                </div>
+              </div>
+              <!-- Temoignages bloc design -->
+              <div class="temoignages__bloc__design"></div>
+              <!-- Temoignages profil de l'utilisateur -->
+              <div class="temoignages__bloc__profil">
+                  <img src="assets/images/avatar.png" alt="avatar"/>    
+              </div>
+            </div>
+          <!-- Fin -->
+
+           <!-- Temoignages comments [Temoignages7] -->
+           <div class="temoignages__bloc__group">
+              <div class="temoignages__bloc__comments">
+                <div class="temoignages__bloc__comments_user">
+                  <blockquote>
+                  <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
+                    </p>
+                    <i class="fa-solid fa-quote-right"></i>
+                    <cite>
+                      <span>Jack Doe</span>
+                    </cite>
+                  </blockquote>
+                </div>
+              </div>
+              <!-- Temoignages bloc design -->
+              <div class="temoignages__bloc__design"></div>
+              <!-- Temoignages profil de l'utilisateur -->
+              <div class="temoignages__bloc__profil">
+                  <img src="assets/images/avatar.png" alt="avatar"/>    
+              </div>
+            </div>
+          <!-- Fin -->
+
+           <!-- Temoignages comments [Temoignages8] -->
+           <div class="temoignages__bloc__group">
+              <div class="temoignages__bloc__comments">
+                <div class="temoignages__bloc__comments_user">
+                  <blockquote>
+                  <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries.
+                    </p>
+                    <i class="fa-solid fa-quote-right"></i>
+                    <cite>
+                      <span>Pitt Doe</span>
+                    </cite>
+                  </blockquote>
+                </div>
+              </div>
+              <!-- Temoignages bloc design -->
+              <div class="temoignages__bloc__design"></div>
+              <!-- Temoignages profil de l'utilisateur -->
+              <div class="temoignages__bloc__profil">
+                  <img src="assets/images/avatar.png" alt="avatar"/>    
+              </div>
+            </div>
+          <!-- Fin -->
      </section>
-     <!-- Contact -->
+     <!-- Section Contact Wrapper -->
      <section id="contact">
       <div class="contact">
+        <!-- Titre de la section Contact -->
         <h3>Nous contacter</h3>
         <div class="contact__bloc">
-          <form>
+          <!-- Formulaire de contact -->
+          <form action="#" method="POST">
             <div class="contact__bloc__left">
-                <textarea></textarea>
+                <textarea name="message"></textarea>
                 <p>
                   <img src="assets/images/Feedback-amico.svg" />
                 </p>
             </div>  
             <div class="contact__bloc__middle">
-                <input type="text" placeholder="Votre nom">
-                <input type="email" placeholder="Votre email">
-                <input type="tel" placeholder="Telephone [Optionnel]">
-                <input type="submit" value="Envoyer">
+                <input type="text" name="nom" placeholder="Votre nom">
+                <input type="email" name="email" placeholder="Votre email">
+                <input type="tel" name="telephone" placeholder="Telephone [Optionnel]">
+                <input type="submit" name="submitContact" value="Envoyer">
             </div>
               <address class="contact__bloc__right">
                 <p>
@@ -424,26 +530,28 @@ declare(strict_types = 1);
                   <span>jeannotcadetclinique@gmail.com</span>
                 </p>
               </address>
-          </form>
-            
+          </form>            
         </div>
       </div>
      </section>
-     <!-- Footer -->
+     <!-- Section Footer wrapper -->
      <footer id="footer">
       <div class="footer">
+        <!-- Les icones de medias sociaux -->
         <p class="footer__social">
           <i class="fa-brands fa-facebook-f"></i>
           <i class="fa-brands fa-twitter"></i>
           <i class="fa-brands fa-linkedin-in"></i>
           <i class="fa-brands fa-youtube"></i>
          </p>
+         <!-- Liens de menu footer -->
         <ul class="menufooter">
           <li><a href="#">Misson</a></li>
           <li><a href="#">Partenaires</a></li>
           <li><a href="#">Carri&egrave;res</a></li>
           <li><a href="#">Termes et conditions</a></li>  
         </ul>
+        <!-- Copyright et contact du webmaster -->
         <p class="footer__copyright"><span>Clinique Jeannot Cadet@2023</span><span> Tous droits r&eacute;serv&eacute;s</span> <span>|</span> <span>Conception par : Ricardo Samedi</span></p>
       </div>
      </footer>
@@ -455,13 +563,11 @@ declare(strict_types = 1);
 
 
 
-  <!-- Inclusion des scripts Bootstrap [popper.min.js et bootstrap-min-js] -->
+  <!-- Inclusion de jQuery -->
   <script
   src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
   crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -745,17 +745,41 @@ a:hover {
   color: #E85C1C;
   font-size: 3.2rem;
   margin-bottom: 3rem;
+  min-width: 30rem;
 }
 
-/* line 537, ../sass/styles.scss */
+/* line 538, ../sass/styles.scss */
+.temoignages h3 span {
+  display: block;
+  line-height: 1.5;
+}
+
+/* line 542, ../sass/styles.scss */
+.temoignages__navigation__bloc {
+  display: flex;
+}
+
+/* line 545, ../sass/styles.scss */
+.temoignages__navigation__left {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* line 550, ../sass/styles.scss */
+.temoignages__navigation__right {
+  position: relative;
+  top: 0;
+  right: calc(-100% + 7rem);
+}
+
+/* line 555, ../sass/styles.scss */
 .temoignages__navigation {
   width: 3rem;
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  right: calc(-100% + 4rem);
   color: #E85C1C;
   border: 0.1rem solid #eeeded;
   background-color: #ffffff;
@@ -763,25 +787,51 @@ a:hover {
   cursor: pointer;
 }
 
-/* line 552, ../sass/styles.scss */
+/* line 567, ../sass/styles.scss */
+.temoignages__navigation__left {
+  display: none;
+}
+
+/* line 570, ../sass/styles.scss */
+.temoignages__navigation__left.active {
+  display: flex;
+}
+
+/* line 573, ../sass/styles.scss */
+.temoignages__navigation__right {
+  display: none;
+}
+
+/* line 576, ../sass/styles.scss */
+.temoignages__navigation__right.active {
+  display: flex;
+}
+
+/* line 579, ../sass/styles.scss */
 .temoignages__bloc {
   min-width: 30rem;
   position: relative;
 }
 
-/* line 556, ../sass/styles.scss */
+/* line 583, ../sass/styles.scss */
+.temoignages__bloc__group {
+  width: 96%;
+  transition: transform 0.3s ease-in;
+}
+
+/* line 611, ../sass/styles.scss */
 .temoignages__bloc__comments {
   background: #ffffff;
   position: relative;
 }
 
-/* line 561, ../sass/styles.scss */
+/* line 616, ../sass/styles.scss */
 .temoignages__bloc__comments_user {
   padding: 0 1rem;
   border: 0.1rem solid #eeeded;
 }
 
-/* line 566, ../sass/styles.scss */
+/* line 621, ../sass/styles.scss */
 .temoignages blockquote i {
   display: block;
   padding: 0.5rem 0;
@@ -791,37 +841,37 @@ a:hover {
   cursor: pointer;
 }
 
-/* line 575, ../sass/styles.scss */
+/* line 630, ../sass/styles.scss */
 blockquote p {
   margin-bottom: 0;
-  padding: 0 2.5rem;
+  padding: 0 0 0 2rem;
 }
 
-/* line 579, ../sass/styles.scss */
+/* line 634, ../sass/styles.scss */
 blockquote p + i {
   text-align: right;
 }
 
-/* line 582, ../sass/styles.scss */
+/* line 637, ../sass/styles.scss */
 .temoignages cite {
   display: block;
   text-align: right;
 }
 
-/* line 586, ../sass/styles.scss */
+/* line 641, ../sass/styles.scss */
 .temoignages cite span::before {
   content: "_";
   font-size: 2rem;
 }
 
-/* line 591, ../sass/styles.scss */
+/* line 646, ../sass/styles.scss */
 .temoignages cite span {
   font-size: 1.2rem;
   font-style: italic;
   color: #E85C1C;
 }
 
-/* line 596, ../sass/styles.scss */
+/* line 651, ../sass/styles.scss */
 .temoignages__bloc__design {
   width: 3rem;
   height: 3rem;
@@ -835,7 +885,7 @@ blockquote p + i {
   display: none;
 }
 
-/* line 609, ../sass/styles.scss */
+/* line 664, ../sass/styles.scss */
 .temoignages__bloc__profil {
   width: 5rem;
   height: 5rem;
@@ -849,7 +899,7 @@ blockquote p + i {
   top: -6rem;
 }
 
-/* line 621, ../sass/styles.scss */
+/* line 676, ../sass/styles.scss */
 .temoignages__bloc__profil img {
   width: 100%;
   height: auto;
@@ -858,38 +908,23 @@ blockquote p + i {
   opacity: 0.75;
 }
 
-/* line 629, ../sass/styles.scss */
+/* line 684, ../sass/styles.scss */
 .temoignages__bloc {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-/* line 634, ../sass/styles.scss */
+/* line 689, ../sass/styles.scss */
 .temoignages__bloc__group {
   width: 96%;
+  max-width: 30rem;
   flex-shrink: 0;
-  transition: transform 0.3s ease-in;
-}
-
-/* line 640, ../sass/styles.scss */
-.posX102 {
-  transform: translateX(-100%);
-}
-
-/* line 643, ../sass/styles.scss */
-.posX204 {
-  transform: translateX(-201%);
-}
-
-/* line 646, ../sass/styles.scss */
-.posX306 {
-  transform: translateX(-303%);
 }
 
 /*
 * Footer
 */
-/* line 653, ../sass/styles.scss */
+/* line 700, ../sass/styles.scss */
 #footer {
   border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
   padding: 2rem 1rem;
@@ -897,12 +932,12 @@ blockquote p + i {
   color: #c4c4c4;
 }
 
-/* line 659, ../sass/styles.scss */
+/* line 706, ../sass/styles.scss */
 .footer {
   min-width: 30rem;
 }
 
-/* line 662, ../sass/styles.scss */
+/* line 709, ../sass/styles.scss */
 .menufooter,
 .footer__social {
   display: flex;
@@ -912,7 +947,7 @@ blockquote p + i {
   padding: 0.5rem 0;
 }
 
-/* line 670, ../sass/styles.scss */
+/* line 717, ../sass/styles.scss */
 .footer__copyright {
   display: flex;
   flex-direction: column;
@@ -922,12 +957,12 @@ blockquote p + i {
   padding: 0.5rem 0;
 }
 
-/* line 678, ../sass/styles.scss */
+/* line 725, ../sass/styles.scss */
 .footer__copyright span:nth-child(3) {
   display: none;
 }
 
-/* line 681, ../sass/styles.scss */
+/* line 728, ../sass/styles.scss */
 .footer__social i {
   cursor: pointer;
   font-size: 1.6rem;
@@ -935,112 +970,105 @@ blockquote p + i {
 
 /* Taille d'ecran minimal 576px */
 @media screen and (min-width: 576px) {
-  /* line 689, ../sass/styles.scss */
+  /* line 736, ../sass/styles.scss */
   .sectionCliniqueGroup {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
   }
 
-  /* line 694, ../sass/styles.scss */
+  /* line 741, ../sass/styles.scss */
   .sectionCliniqueGroup__ {
     width: calc(50% - 1rem);
   }
 
   /* Equipe */
-  /* line 698, ../sass/styles.scss */
+  /* line 745, ../sass/styles.scss */
   .equipe__group {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
   }
 
-  /* line 703, ../sass/styles.scss */
+  /* line 750, ../sass/styles.scss */
   .equipe__bloc {
     width: calc(50% - 1rem);
   }
 
-  /* line 706, ../sass/styles.scss */
+  /* line 753, ../sass/styles.scss */
   .services__left__box {
     width: 14rem;
     height: 14rem;
   }
 
-  /* line 710, ../sass/styles.scss */
+  /* line 757, ../sass/styles.scss */
   .services__left__box__label {
     transform: translateY(-14rem);
   }
 
-  /* line 713, ../sass/styles.scss */
+  /* line 760, ../sass/styles.scss */
   .container__top {
     margin-top: -4.2rem;
   }
 
   /* Contact */
-  /* line 717, ../sass/styles.scss */
+  /* line 764, ../sass/styles.scss */
   .contact__bloc address {
     margin-top: 0;
   }
 
-  /* line 720, ../sass/styles.scss */
+  /* line 767, ../sass/styles.scss */
   .contact__bloc form {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
   }
 
-  /* line 725, ../sass/styles.scss */
+  /* line 772, ../sass/styles.scss */
   .contact__bloc__left {
     width: 100%;
   }
 
-  /* line 728, ../sass/styles.scss */
+  /* line 775, ../sass/styles.scss */
   .contact__bloc__middle {
     width: calc(60% - 1rem);
   }
 
-  /* line 731, ../sass/styles.scss */
+  /* line 778, ../sass/styles.scss */
   .contact__bloc__right {
     width: calc(40% - 1rem);
   }
 
-  /* line 734, ../sass/styles.scss */
+  /* line 781, ../sass/styles.scss */
   .contact__bloc__right p {
     min-width: 27rem;
     line-height: 2;
   }
 
   /* Temoignages */
-  /* line 739, ../sass/styles.scss */
+  /* line 795, ../sass/styles.scss */
+  .temoignages h3 span {
+    display: inline;
+    line-height: 1;
+  }
+
+  /* line 799, ../sass/styles.scss */
   .temoignages__bloc {
-    display: flex;
-    flex-wrap: wrap;
     gap: 2rem;
   }
 
-  /* line 744, ../sass/styles.scss */
-  .temoignages__bloc__group {
-    width: calc(50% - 1rem);
-    margin-top: 2rem;
-  }
-
-  /* line 748, ../sass/styles.scss */
+  /* line 802, ../sass/styles.scss */
   .temoignages__bloc__profil {
     top: 0;
   }
 
-  /* line 751, ../sass/styles.scss */
+  /* line 805, ../sass/styles.scss */
   .temoignages__bloc__design {
     display: block;
   }
 
-  /* line 754, ../sass/styles.scss */
-  .temoignages__navigation {
-    display: none;
-  }
-
   /* Footer */
-  /* line 758, ../sass/styles.scss */
+  /* line 810, ../sass/styles.scss */
   .footer__copyright {
     display: flex;
     flex-direction: row;
@@ -1048,7 +1076,7 @@ blockquote p + i {
     gap: 2;
   }
 
-  /* line 764, ../sass/styles.scss */
+  /* line 816, ../sass/styles.scss */
   .footer__copyright span:nth-child(3) {
     display: inline;
   }
@@ -1056,7 +1084,7 @@ blockquote p + i {
 /* Taille d'ecran minimal 768px */
 @media screen and (min-width: 768px) {
   /* Navigation */
-  /* line 772, ../sass/styles.scss */
+  /* line 824, ../sass/styles.scss */
   .navigation,
   .headerMiddle,
   .sectionClinique,
@@ -1069,7 +1097,7 @@ blockquote p + i {
     padding-right: 2rem;
   }
 
-  /* line 783, ../sass/styles.scss */
+  /* line 835, ../sass/styles.scss */
   .headerTop {
     width: 100%;
     position: fixed;
@@ -1079,25 +1107,25 @@ blockquote p + i {
   }
 
   /*Clinique*/
-  /* line 791, ../sass/styles.scss */
+  /* line 843, ../sass/styles.scss */
   .sectionClinique {
     padding: 3rem 2rem;
   }
 
-  /* line 795, ../sass/styles.scss */
+  /* line 847, ../sass/styles.scss */
   .navigation {
     padding-top: 0;
     padding-bottom: 0;
   }
 
   /* Menuburger*/
-  /* line 801, ../sass/styles.scss */
+  /* line 853, ../sass/styles.scss */
   .menuburger {
     display: none;
   }
 
   /* Menu */
-  /* line 805, ../sass/styles.scss */
+  /* line 857, ../sass/styles.scss */
   .menu {
     width: auto;
     height: 100%;
@@ -1111,7 +1139,7 @@ blockquote p + i {
     line-height: 3rem;
   }
 
-  /* line 817, ../sass/styles.scss */
+  /* line 869, ../sass/styles.scss */
   .menu li {
     margin-bottom: 0;
     margin-left: 0.2rem;
@@ -1120,23 +1148,23 @@ blockquote p + i {
     text-align: center;
   }
 
-  /* line 826, ../sass/styles.scss */
+  /* line 878, ../sass/styles.scss */
   .menu li.active {
     background-color: #C9DDF1;
   }
 
-  /* line 829, ../sass/styles.scss */
+  /* line 881, ../sass/styles.scss */
   .menu li.active a {
     color: #230939;
   }
 
-  /* line 832, ../sass/styles.scss */
+  /* line 884, ../sass/styles.scss */
   .menu li a {
     display: block;
     padding: 1.25rem;
   }
 
-  /* line 836, ../sass/styles.scss */
+  /* line 888, ../sass/styles.scss */
   .menu li:nth-child(1):hover,
   .menu li:nth-child(2):hover,
   .menu li:nth-child(3):hover,
@@ -1144,7 +1172,7 @@ blockquote p + i {
     background-color: #C9DDF1;
   }
 
-  /* line 842, ../sass/styles.scss */
+  /* line 894, ../sass/styles.scss */
   .menu li:nth-child(1):hover a,
   .menu li:nth-child(2):hover a,
   .menu li:nth-child(3):hover a,
@@ -1152,34 +1180,34 @@ blockquote p + i {
     color: #230939;
   }
 
-  /* line 848, ../sass/styles.scss */
+  /* line 900, ../sass/styles.scss */
   .menu a span + span {
     display: none;
     margin-left: 0;
   }
 
-  /* line 852, ../sass/styles.scss */
+  /* line 904, ../sass/styles.scss */
   .fa-regular.fa-circle-user {
     display: inline;
   }
 
-  /* line 855, ../sass/styles.scss */
+  /* line 907, ../sass/styles.scss */
   .fa-regular.fa-comments {
     display: inline;
   }
 
-  /* line 858, ../sass/styles.scss */
+  /* line 910, ../sass/styles.scss */
   .fa-regular.fa-envelope {
     display: inline;
   }
 
-  /* line 861, ../sass/styles.scss */
+  /* line 913, ../sass/styles.scss */
   .menuLinkHidden {
     display: none;
   }
 
   /* HeaderMiddle */
-  /* line 865, ../sass/styles.scss */
+  /* line 917, ../sass/styles.scss */
   .headerMiddle {
     display: flex;
     flex-wrap: wrap;
@@ -1188,23 +1216,23 @@ blockquote p + i {
     text-align: left;
   }
 
-  /* line 872, ../sass/styles.scss */
+  /* line 924, ../sass/styles.scss */
   .headerMiddle img {
     width: calc(50% - 1rem);
   }
 
-  /* line 875, ../sass/styles.scss */
+  /* line 927, ../sass/styles.scss */
   .accroche {
     width: calc(50% - 1rem);
     padding: 2rem 1rem;
   }
 
-  /* line 879, ../sass/styles.scss */
+  /* line 931, ../sass/styles.scss */
   .accroche strong {
     font-size: 3.2rem;
   }
 
-  /* line 882, ../sass/styles.scss */
+  /* line 934, ../sass/styles.scss */
   .accroche h2 {
     font-size: 2.4rem;
     margin-top: 1rem;
@@ -1212,7 +1240,7 @@ blockquote p + i {
   }
 
   /* Bouton btn-accroche */
-  /* line 888, ../sass/styles.scss */
+  /* line 940, ../sass/styles.scss */
   .btn-accroche {
     width: 16rem;
     margin-left: 0;
@@ -1220,70 +1248,70 @@ blockquote p + i {
   }
 
   /* Equipe */
-  /* line 894, ../sass/styles.scss */
+  /* line 946, ../sass/styles.scss */
   .equipe__group {
     gap: 3rem;
   }
 
-  /* line 897, ../sass/styles.scss */
+  /* line 949, ../sass/styles.scss */
   .equipe__bloc {
     width: calc(50% - 1.5rem);
     margin-bottom: 3rem;
   }
 
-  /* line 901, ../sass/styles.scss */
+  /* line 953, ../sass/styles.scss */
   .services__top {
     display: flex;
     flex-direction: row-reverse;
   }
 
-  /* line 905, ../sass/styles.scss */
+  /* line 957, ../sass/styles.scss */
   .services {
     flex-direction: column;
   }
 
-  /* line 908, ../sass/styles.scss */
+  /* line 960, ../sass/styles.scss */
   .services__bottom {
     margin-top: -13.6rem;
   }
 
-  /* line 911, ../sass/styles.scss */
+  /* line 963, ../sass/styles.scss */
   .services__left {
     width: calc(70% - 1rem);
     padding-right: 5rem;
   }
 
-  /* line 915, ../sass/styles.scss */
+  /* line 967, ../sass/styles.scss */
   .services__bottom hr {
     display: block;
   }
 
-  /* line 918, ../sass/styles.scss */
+  /* line 970, ../sass/styles.scss */
   .container__services.active .services__left__box__label {
     font-size: 1.4rem;
   }
 
   /* Galeries */
-  /* line 922, ../sass/styles.scss */
+  /* line 974, ../sass/styles.scss */
   .galeries {
     grid-template-columns: 15% 20%  25% 25% 15%;
     grid-template-rows: 25% 5% 20% 10% 40%;
     grid-template-areas: "g1 g3 g5 g6 g10" "g2 g3 g5 g6 g10" "g2 g3 g7 g7 g10" "g4 g4 g7 g7 g10" "g4 g4 g8 g9 g10";
   }
 
-  /* line 931, ../sass/styles.scss */
+  /* line 983, ../sass/styles.scss */
   .contact__bloc form {
     flex-direction: row;
     gap: 1.5rem;
   }
 
-  /* line 935, ../sass/styles.scss */
+  /* line 987, ../sass/styles.scss */
   .contact__bloc__left {
     width: calc(40% - 1rem);
     position: relative;
   }
 
-  /* line 939, ../sass/styles.scss */
+  /* line 991, ../sass/styles.scss */
   .contact__bloc__left p {
     position: absolute;
     display: block;
@@ -1293,23 +1321,23 @@ blockquote p + i {
     z-index: 1;
   }
 
-  /* line 947, ../sass/styles.scss */
+  /* line 999, ../sass/styles.scss */
   .contact__bloc__left textarea {
     position: relative;
     z-index: 2;
   }
 
-  /* line 952, ../sass/styles.scss */
+  /* line 1004, ../sass/styles.scss */
   .contact__bloc__middle {
     width: calc(30% - 1rem);
   }
 
-  /* line 955, ../sass/styles.scss */
+  /* line 1007, ../sass/styles.scss */
   .contact__bloc__right {
     width: calc(30% - 1rem);
   }
 
-  /* line 958, ../sass/styles.scss */
+  /* line 1010, ../sass/styles.scss */
   .contact__bloc address {
     margin-top: 0;
     font-size: 1.2rem;
@@ -1318,7 +1346,7 @@ blockquote p + i {
 /* Taille d'ecran minimal 992px */
 @media screen and (min-width: 992px) {
   /* Container centre navigation*/
-  /* line 967, ../sass/styles.scss */
+  /* line 1019, ../sass/styles.scss */
   .navigation,
   .headerMiddle,
   .sectionClinique,
@@ -1332,51 +1360,39 @@ blockquote p + i {
   }
 
   /* Nom clinique */
-  /* line 980, ../sass/styles.scss */
+  /* line 1032, ../sass/styles.scss */
   .logo h1 {
     font-size: 1.8rem;
   }
 
   /* Equipe */
-  /* line 984, ../sass/styles.scss */
+  /* line 1036, ../sass/styles.scss */
   .equipe__group {
     gap: 1rem;
   }
 
-  /* line 987, ../sass/styles.scss */
+  /* line 1039, ../sass/styles.scss */
   .equipe__bloc {
     width: calc(25% - 1rem);
     margin-bottom: 0;
   }
 
-  /* line 991, ../sass/styles.scss */
+  /* line 1043, ../sass/styles.scss */
   .galeries {
     height: 60rem;
   }
 
   /* Temoignages */
-  /* line 995, ../sass/styles.scss */
-  .temoignages__bloc {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  /* line 1000, ../sass/styles.scss */
-  .temoignages__bloc__group {
-    width: calc(25% - 2rem);
-    margin-top: 2rem;
-  }
 }
 /* Taille d'ecran minimal 1200px */
 @media screen and (min-width: 1200px) {
   /* Container centre headeMiddle */
-  /* line 1010, ../sass/styles.scss */
+  /* line 1062, ../sass/styles.scss */
   .sectionCliniqueGroup {
     gap: 0.5rem;
   }
 
-  /* line 1013, ../sass/styles.scss */
+  /* line 1065, ../sass/styles.scss */
   .sectionCliniqueGroup__ {
     width: calc(25% - 1rem);
   }
